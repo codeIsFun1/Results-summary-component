@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="(https://fonts.google.com/specimen/Hanken+Grotesk)"
+    />
+
+    <title>Frontend Mentor | Results summary component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Hanken Grotesk;
+      }
+      body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #fff;
+        flex-direction: column;
+      }
+      .container {
+        /* border: 1px solid red; */
+        display: flex;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+         width: 50vw;
+        border-radius: 15px;
+      }
+
+      .left-card {
+        background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        padding: 1rem ;
+        /* max-width: 100%; */
+      }
+      .left-title h2 {
+        color: hsl(241, 100%, 89%);
+        width: 100%;
+        text-align: center;
+      }
+      .meter {
+        width: 150px;
+        height: 150px;
+        border-radius: 75px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        background: linear-gradient(
+          hsla(256, 72%, 46%, 1),
+          hsla(241, 72%, 46%, 0)
+        );
+        padding: 1rem;
+      }
+      .meter h1 {
+        color: hsl(0, 0%, 100%);
+        font-size: 4rem;
+      }
+      .meter p {
+        color: hsl(221, 100%, 96%);
+      }
+      .left-title-1 h2 {
+        color: hsl(0, 0%, 100%);
+      }
+      .para{
+        width: 100%;
+      }
+      .para p {
+        color: hsl(241, 100%, 89%);
+        text-align: center;
+      }
+
+      .margin {
+        margin: 0.5rem 0;
+      }
+
+      .right-card{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        margin-left: 2rem;
+        justify-content:space-around;
+        width: 50%;
+      }
+      .right-title h2{
+        color:  hsl(224, 30%, 27%);
+
+      }
+      .right-utility-container{
+         width: 90%;
+         
+         
+      }
+
+      .utility {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          flex-wrap: wrap;
+          padding: 1rem;
+          margin-bottom: .9rem;
+          border-radius: 15px;
+      }
+
+      .utility div:first-child{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .light-red{
+        background-color: #fff6f5;
+      }
+      .orange-yellow{
+        background-color: #fffbf2;
+      }
+      .green-teal{
+        background-color:  #f2fafa;
+      }
+      .cobalt-blue{
+        background-color: #f3f3fd;
+      }
+
+      button{
+        width: 90%;
+        padding: 10px;
+        border-radius: 20px;
+        font-size: 1rem;
+        color: #fff;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background-color: #303b59;
+      }
+      span{
+        margin-left: 15px;
+        
+      }
+      .bold{
+        font-weight: 800;
+      }
+      .light{
+        font-weight: 400;
+        color: rgb(185, 192, 198);
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        margin-top: 1rem;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      @media (max-width: 984px){
+        .container{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-card">
+        <div class="left-title margin">
+          <h2>Your Result</h2>
+        </div>
+        <div class="meter margin">
+          <h1>76</h1>
+          <p>of 100</p>
+        </div>
+        <div class="left-title-1 margin">
+          <h2>Great</h2>
+        </div>
+        <div class="para margin">
+          <p>You scored higher than 65% of</p>
+          <p>the people who have taken</p>
+          <p>these tests.</p>
+        </div>
+      </div>
+      <div class="right-card">
+        <div class="right-title">
+          <h2>Summary</h2>
+        </div>
+        <div class="right-utility-container">
+        <div class="utility light-red">
+          <div>
+            <img
+              src="./assets/images/icon-reaction.svg"
+              alt="reaction svg"
+            /><span style="color:red;">Reaction</span>
+          </div>
+          <div>
+            <span class="bold">80</span>
+            <span class="light">/100</span>
+          </div>
+        </div>
+
+        <div class="utility orange-yellow">
+          <div>
+            <img
+              src="./assets/images/icon-memory.svg"
+              alt="reaction svg"
+            /><span style="color:orange;">Memory</span>
+          </div>
+          <div>
+            <span class="bold">92</span>
+            <span class="light">/100</span>
+          </div>
+        </div>
+
+        <div class="utility green-teal">
+          <div >
+            <img
+              src="./assets/images/icon-verbal.svg"
+              alt="reaction svg"
+            /><span style="color:teal;">Verbal </span>
+          </div>
+          <div>
+            <span class="bold"> 61</span>
+            <span class="light">/100</span>
+          </div>
+        </div>
+
+        <div class="utility cobalt-blue">
+          <div>
+            <img
+              src="./assets/images/icon-visual.svg"
+              alt="reaction svg"
+            /><span style="color:blue;">Visual</span>
+          </div>
+          <div>
+            <span class="bold">72</span>
+            <span class="light">/100</span>
+          </div>
+        </div>
+      </div>
+        <button class="btn">Continue</button>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Abhishek</a>.
+    </div>
+  </body>
+</html>
